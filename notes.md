@@ -22,3 +22,44 @@ Continuous Integration / Continuous Delivery
     - AWS has built in policies that we can attach directly
     - Tags let you insert metadata so you cna quickly find product / team / etc 
 
+- S3: [GLOBAL]
+    - Simple Storage Service 
+        - Take anything and store it on the cloud
+        - In your account you have 'buckets'
+            - You can put objects (files) in your buckets
+            - You can read from your buckets
+            - You can host web pages out of your buckets
+        - Infinitely scalable / High Availability / High Durability 
+        - Versioning
+        - Encryption
+        - Security
+        - Uploading is free but you get charged for storage
+        - You get charged for requests but can mitigate this
+        - Bucket Names should be UNIQUE
+        - Setup:
+            - Disable ACL's
+            - Block public buckets (disabled temporarily and add policies)
+
+
+- Route 53 (for domains):
+    - AWS's DNS
+    - Makes hooking up a new domain really simple 
+    - Pick a Domain! (.click is cheap)
+        - Create a bucket and name it with the domain (us east 1?)
+    
+
+
+-- S3 & Policies:
+    - What would you want a bucket for a public website to do?
+        - Read access - no write access - no delete access
+    - Permissions: 
+        - Can be written as JSON
+        - Can be generated using a generator on AWS
+            - S3 Bucket Policy
+            - Principal: *
+            - Actions: 'GetObject' 
+            - ARN: (bucket it can do the thing in
+            - Example in REPO w/ Boilerplate
+
+-- Adding things to the bucket!
+
