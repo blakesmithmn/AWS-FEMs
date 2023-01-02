@@ -71,4 +71,22 @@ AWS Command Line (checking and deploying):
 ``` aws s3 cp build s3://{bucketname}```
 
 
+Routing:
 
+- Route 53 ~ domains
+- Manage DNS:
+    - View Details (not edit for some reason)
+        - Alias
+        - Alias to S3 Website Endpoint ... choose region and hit create!
+    - SSL Cert [Amazon Certificate Manager]:
+        - Request a certificate
+        - Create records in Route 53
+        - [WAIT]
+- fixing the www problem:
+    - Create a bucket that redirects to another bucket! (goofy but ... it works?)
+    - www.DOMAINNAME.END (in same region)
+    - Properties - static website hosting
+    - Properties redirect requests for an object
+    - you'll have to set up DNS through Route 53
+        - view details - create a record www. [ALIAS]
+        
