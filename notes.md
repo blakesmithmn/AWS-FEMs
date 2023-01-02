@@ -63,3 +63,12 @@ Continuous Integration / Continuous Delivery
 
 -- Adding things to the bucket!
 
+
+AWS Command Line (checking and deploying):
+
+```aws s3 ls://{bucketname}```
+
+``` aws s3 cp build s3://{bucketname}```
+
+
+
