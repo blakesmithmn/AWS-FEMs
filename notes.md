@@ -89,4 +89,18 @@ Routing:
     - Properties redirect requests for an object
     - you'll have to set up DNS through Route 53
         - view details - create a record www. [ALIAS]
-        
+    
+
+CloudFront:
+- Point CloudFront to the exact S3 bucket you are wishing to access 
+- Most of the defaults are good ~ but change it to redirect HTTP to HTTPS
+- Set up alternative domain name if applicable for BOTH the www. and without it
+    - connect it to the SSL cert 
+- DEFAULT ROOT OBJECT: index.html
+
+
+Conencting Route 53 to CloudFront Distribution:
+- Registered Domains
+    - Manage DNS (view details) [REPEAT FOR BOTH URL VERSIONS]
+        - Edit Record ~ alias to CloudFront distribution and find the correct CF domain
+        - 
