@@ -103,4 +103,12 @@ Conencting Route 53 to CloudFront Distribution:
 - Registered Domains
     - Manage DNS (view details) [REPEAT FOR BOTH URL VERSIONS]
         - Edit Record ~ alias to CloudFront distribution and find the correct CF domain
-        - 
+
+
+Depending on the distance from a given host location ~ your service will respond very slowly (ping)
+You'll want to either globally distribute through something with CloudFront or host near where it will be used
+
+CloudFront will cache your assets in S3 which reduces the total number of requests
+
+CloudFront also supports HTTP2 out of the box
+
